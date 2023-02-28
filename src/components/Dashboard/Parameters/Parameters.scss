@@ -1,0 +1,34 @@
+.parametersInfo{
+    background-color: #fff;
+    box-shadow: 0px 1px 2px #5a5a5a;
+    padding: 2%;
+    overflow-y:auto ;
+    border-radius: 5px;
+    h4 {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 1.5rem;
+    }
+    .parameter{
+        box-shadow: 0px 0px 4px #5a5a5a;
+        padding:1.5% 3% 1%;
+        margin-bottom: 2rem;
+        border-radius: 5px;
+        h4{
+            font-size: 1.4rem;
+            margin: 0;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+        .ant-progress{
+            padding-top: 1%;
+            .ant-progress-inner{
+            height: 15px;
+            .ant-progress-bg{
+                height: 15px !important;
+            }
+        }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.dashboard_conatiner {
+    padding: 1% 1.5%;
+    .dashboard_conatiner_data {
+        margin: 0% 15%;
+        padding: 2%;
+        .dashboard_content {
+            padding: 2% 0% 1%;
+            display: grid;
+            grid-template-columns: 34% 64%;
+            grid-column-gap: 2%;
+            height: 40vh;
+            h4 {
+                font-size: 1.4rem;
+                font-weight: 500;
+                opacity: 0.8;
+                padding: 1rem;
+                margin: 0;
+            }
+            .call_progress {
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0px 1px 2px #5a5a5a;
+                padding: 1%;
+                text-align: center;
+                h4 {
+                    margin-bottom: 1rem;
+                }
+                .ant-progress {
+                    padding-top: 1%;
+                    .ant-progress-inner {
+                        width: 18rem !important;
+                        height: 18rem !important;
+                    }
+                }
+            }
+            .call_statement {
+                box-sizing: border-box;
+                height: 100%;
+                .call_statement_data {
+                    display: grid;
+                    grid-template-columns: 49% 49%;
+                    grid-column-gap: 2%;
+                    .info_data {
+                        padding: 1% 2%;
+                        border-radius: 5px;
+                        box-shadow: 0px 1px 2px #5a5a5a;
+                        background-color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .anticon-frown {
+                            font-size: 2rem !important  ;
+                            color: #00c576;
+                        }
+                        .ant-rate {
+                            font-size: 1.6rem;
+                            .ant-rate-star {
+                                color: #5a5a5a;
+                                color: #f6bb7e;
+                            }
+                        }
+                    }
+                }
+                .call_statement_content {
+                    background-color: #fff;
+                    border-radius: 5px;
+                    box-shadow: 0px 1px 2px #5a5a5a;
+                    padding: 1.8% 2%;
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    margin-top: 1.2%;
+                    height: 80%;
+                    h6{
+                        margin: 0;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        color: #000;
+                    }
+                    h1{
+                        margin: 0;
+                        font-weight: 600;
+                        color: #2d80b5;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+        .play_item{
+            padding: 2% 1% 1%;
+            margin-top: 1%;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 1px 2px #5a5a5a;
+            .anticon{
+                font-size: 2.5rem;
+                margin-bottom: 0;
+                color: #5a5a5a;
+                cursor: pointer;
+            }
+            h6{
+                margin: 0;
+                padding-top: 0.5rem;
+                font-size: 1.3rem;
+                color: #2d80b5;
+                padding-left: 1%;
+                font-weight: 400;
+            }
+        }
+        .trans_details{
+            margin-top: 2%;
+            display: grid;
+            grid-template-columns: 49% 49%;
+            grid-column-gap: 2%;
+            height: 40rem;
+        }
+    }
+}
