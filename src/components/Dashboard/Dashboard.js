@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import "./Dashboard.scss";
 import Header from '../Header/Header';
-import { HomeOutlined, FrownOutlined, PlayCircleFilled } from '@ant-design/icons';
+import { HomeOutlined, FrownOutlined, PlayCircleFilled,PlayCircleOutlined,PauseCircleOutlined } from '@ant-design/icons';
 import { Breadcrumb } from 'antd';
 import { Progress } from 'antd';
 import { Rate } from 'antd';
 import Parameters from './Parameters/Parameters';
 import Transcipt from './Transcipt/Transcipt';
+import Waveform from '../Audio/Waveform';
 
 const Dashboard = () => {
     const staementInfo = [
@@ -71,6 +72,14 @@ const Dashboard = () => {
             color:"#f6baa5"
         },
     ]
+    
+  const [playing, setPlay] = useState(false);
+
+  const wavesurfer = useRef(null);
+  const handlePlayPause = () => {
+    setPlay(!playing);
+    wavesurfer.current.playPause();
+  };
 
     return (
         <div>
@@ -120,8 +129,14 @@ const Dashboard = () => {
 
                     <div className='play_item'>
                         {/* <audio src="example.mp3" controls></audio> */}
-                        <PlayCircleFilled />
-                        <h6>00 : 00</h6>
+                       <div>
+                       {/* <PlayCircleFilled /> */}
+                       <span className='actionPlayer' onClick={handlePlayPause}>{!playing ?<PlayCircleOutlined />: <PauseCircleOutlined />}</span>
+                        {/* <h6>00 : 00</h6> */}
+                       </div>
+                       <div>
+                        <Waveform playing={playing} setPlay={setPlay} wavesurfer={wavesurfer} />
+                       </div>
                     </div>
 
                     <div className='trans_details'>
